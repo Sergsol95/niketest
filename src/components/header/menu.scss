@@ -1,0 +1,51 @@
+.sidebar {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 8px;
+    left: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    transform: translateX(130%);
+    transition: transform .25s;
+
+    &.active {
+        transform: translateX(0);
+        transition: transform .25s;
+    }
+
+    &__content {
+        width: 33%;
+        height: 100%;
+        background-color: white;
+        padding: 40px 36px 150px;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+    }
+
+    &__item {
+        padding: 10px 0;
+        text-decoration: none;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #000;
+        font-size: 24px;
+        font-weight: 500;
+    }
+}
+
+.blur {
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(2px);
+    position: absolute;
+    right: 33%;
+}

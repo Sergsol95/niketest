@@ -10,25 +10,20 @@ import twitter from "../../img/twitter.svg";
 import facebook from "../../img/facebook.svg";
 import left from "../../img/left.svg";
 import right from "../../img/right.svg";
+import Menu from "./menu";
+import * as FaIcons from 'react-icons/fa';
+import * as FiIcons from 'react-icons/fi';
+import { SidebarData } from "./data";
 
 
 function Header () {
-
-    const itemSizeCheck = document.querySelectorAll('.item__size__input:checked')
-
     const [count, setCount] = useState(0);
-    function increment () {
-            if (itemSizeCheck) {
-                setCount(count + 1)
-            }
-            else setCount(count)
-        }
-    
-    
-    
+
+    const [activeMenu, changeState] = useState(false);
+
     
     return (
-    <body class="body">
+    <body className="body">
         <header className="header">
         <img src={nikeLogo} alt="" className="logo"/>
         <nav className="nav">
@@ -40,11 +35,15 @@ function Header () {
                 <li className="nav__item">CUSTOMIZE</li>
             </ul>
         </nav>
-        <div className="info">
+        <Menu active={activeMenu} setActive={changeState} items={SidebarData}/>
+        <div className="purchase">
             <img src={profile} alt="" className="profile"/>
             <img src={cart} alt="" className="cart"/>
             <div className="cart__shell">
                 <span className="cart__counter">{count}</span>
+            </div>
+            <div className="button__burger" onClick={() => changeState(!activeMenu)}>
+                <span className="button__burger_mid"/>
             </div>
         </div>
     </header>
@@ -145,7 +144,7 @@ function Header () {
             </div>
         </div>
         <div className="footer__cart">
-            <button onClick={increment} className="button button_cart">ADD TO CART - </button>
+            <button onClick={() => setCount(count + 1)} className="button button_cart">ADD TO CART - </button>
             <div> $95.97</div>
         </div>
     </footer>
