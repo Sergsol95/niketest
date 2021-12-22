@@ -9,9 +9,11 @@
     transform: translateX(130%);
     transition: transform .25s;
 
+
     &.active {
         transform: translateX(0);
         transition: transform .25s;
+        z-index: 1;
     }
 
     &__content {
@@ -19,6 +21,10 @@
         height: 100%;
         background-color: white;
         padding: 40px 36px 150px;
+
+        @media all and (max-width:600px) {
+            width: 80%;
+        }
     }
 
     &__nav {
@@ -32,6 +38,7 @@
         text-decoration: none;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     &__link {
@@ -47,5 +54,13 @@
     height: 100vh;
     backdrop-filter: blur(2px);
     position: absolute;
-    right: 33%;
+    right: 30%;
+
+    &.active {
+        right: 30%;
+
+        @media all and (max-width:600px) {
+            right: 80%;
+        }
+    }
 }

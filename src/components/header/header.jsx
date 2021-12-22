@@ -56,12 +56,8 @@ function Header () {
         <p className="item__text">
         The Nike Air Edge 270 takes the look of retro basketball and puts it through a modern lens.
         </p>
-        <div>
-            <img src="" alt=""/>
-            <span>PLAY VIDEO</span>
-        </div>
     </section>
-    <section>
+    <section className="section section_photo"> 
     <img src={sneaker} alt="" className="item__photo"/>
     </section>
     <section className="section section_pick">
