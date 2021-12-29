@@ -1,5 +1,4 @@
 import React from 'react'
-import * as FaIcons from 'react-icons/fa'
 import * as FiIcons from 'react-icons/fi'
 
 export const SidebarData = [

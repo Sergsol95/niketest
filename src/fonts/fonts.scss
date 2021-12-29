@@ -1,7 +1,14 @@
 @font-face {
-    font-family: "TradeGothic LT CondEighteen";
-    src: url("./TradeGothicLT-CondEighteen.ttf") format("ttf");
+    font-family: "TradeGothic LT";
+    src: url("./Trade_Gothic_LT.ttf") format("ttf");
+    font-weight: 500;
 }
+
+@font-face {
+    font-family: "TradeGothic LT";
+    src: url("./Trade_Gothic_LT_Bold.ttf") format('ttf');
+    font-weight: 800;
+  }
 
 
 

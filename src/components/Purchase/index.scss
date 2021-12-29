@@ -1,0 +1,79 @@
+.purchase {
+    display: flex;
+    align-items: center;
+}
+
+.cart {
+    cursor: pointer;
+    @media all and (max-width:980px) {
+        margin-right: 43.5px;
+    }
+
+    &__counter {
+        color: #FFFFFF;
+    }
+
+    &__shell {
+        width: 24px;
+        height: 24px;
+        background-color: red;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 33%;
+        right: -1%;
+
+        @media all and (max-width:980px) {
+            right: 51px;
+        }
+    }
+}
+
+.profile {
+    margin-right: 43.5px;
+    cursor: pointer;
+}
+
+.button {
+
+    &__burger {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        display: none;
+        @media all and (max-width:980px) {
+            display: block;
+        }
+
+        &_mid {
+            position: absolute;
+            width: 20px;
+            background-color: black;
+            height: 2px;
+            bottom: 9px;
+        }
+        
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 20px;
+            background-color: black;
+            height: 2px;
+
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 20px;
+            background-color: black;
+            height: 2px;
+        }
+    }
+}

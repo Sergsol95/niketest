@@ -1,0 +1,21 @@
+.section {
+
+    &_socials {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 22px;
+    }
+
+}
+
+.scroll {
+    &__vertical {
+        writing-mode: vertical-lr;
+        transform: rotate(-180deg);
+    }
+}
+
+.socials {
+    display: grid;
+    gap: 20px;
+}
